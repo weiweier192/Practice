@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .slide-button {
+      position: relative;
+      /* width: 30px;
+      height: 20px; */
+      padding: 5px 10px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      z-index: 1;
+      background: #0ff;
+    }
+    .slide-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      /* 元素的堆叠顺序，仅能在定位元素上有效 */
+      z-index: -1;
+      background: #f00;
+      border-radius: 5px;
+      /* 设置 before的退出方向 */
+      transform-origin: center bottom;
+      /* 隐藏 before */
+      transform: scaleY(0);
+      transition: transform .4s ease-in-out;
+    }
+    .slide-button:hover {
+      /* background: #f00; */
+      cursor: pointer;
+    }
+    .slide-button:hover::before {
+      /* 写的位置不同，效果有异 */
+      /* transition: transform .4s ease-in-out; */
+      /* 设置 before 的出现方向 */
+      transform-origin: center top;
+      /* 显示 before */
+      transform: scaleY(1);
+    }
+  </style>
+</head>
+
+<body>
+  <button class='slide-button'>滑箱</button>
+</body>
+
+</html>

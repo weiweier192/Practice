@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .plugin-button {
+      position: relative;
+      z-index: 1;
+      border: none;
+      outline: none;
+      border: none;
+      padding: 5px 10px;
+      color: #fff;
+      background: #1890ff;
+    }
+
+    .plugin-button:hover {
+      cursor: pointer;
+    }
+
+    .plugin-button::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 4px solid #1890ff;
+      transform: scale(1);
+      transform-origin: center;
+      /* transition: all .75s ease-in-out; */
+    }
+
+    .plugin-button:hover::before {
+      /* transition 放在不同位置效果不同 */
+      transition: all 1s ease-in-out;
+      border: 1px solid #e6f7ff;
+      transform: scale(1.25);
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button class='plugin-button'>plugin</button>
+</body>
+
+</html>

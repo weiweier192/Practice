@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .bubble-btn {
+      position: relative;
+      outline: none;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      color: #fff;
+      background: #0ff;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .bubble-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      margin: auto;
+      z-index: -1;
+      border-radius: 50%;
+      background: #000;
+      /* transform-origin: center; */
+      transform: scale(0);
+      transition: transform .4s ease-in-out;
+    }
+
+    .bubble-btn:hover {
+      cursor: pointer;
+    }
+
+    .bubble-btn:hover::before {
+      transform: scale(8);
+    }
+  </style>
+</head>
+
+<body>
+  <button class='bubble-btn'>bubble</button>
+</body>
+
+</html>

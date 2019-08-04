@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .shine-btn {
+      position: relative;
+      outline: none;
+      border: none;
+      padding: 5px 10px;
+      z-index: 1;
+      color: #fff;
+      border-radius: 5px;
+      background: #262626;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .3);
+      overflow: hidden;
+    }
+
+    .shine-btn::before {
+      content: '';
+      position: absolute;
+      top: -7px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 10px;
+      height: 160%;
+      z-index: -1;
+      /* border-radius: 5px; */
+      background: #fff;
+      transform: translateX(-190%) rotate(38deg);
+    }
+    .shine-btn:hover::before {
+      transition: transform .2s ease-in-out;
+      transform: translateX(990%) rotate(38deg);
+    }
+  </style>
+</head>
+
+<body>
+  <button class='shine-btn'>shineButton</button>
+</body>
+
+</html>

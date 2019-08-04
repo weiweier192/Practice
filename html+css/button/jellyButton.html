@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .jelly-button {
+      padding: 5px 8px;
+      color: #fff;
+      outline: none;
+      border: none;
+      background: #0ff;
+    }
+    .jelly-button:hover {
+      cursor: pointer;
+      animation: jelly .5s;
+    }
+    @keyframes jelly {
+      0%,
+      100% {
+        transform: scale(1, 1)
+      }
+      25%,
+      75% {
+        /* transform: scale(1.2, .8) */
+        transform: scale(.9, 1.1)
+      }
+      50% {
+        /* transform: scale(.9, 1.1) */
+        transform: scale(1.1, .9)
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+  <button class='jelly-button'>jelly</button>
+</body>
+
+</html>
