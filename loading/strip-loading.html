@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      height: 600px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .strip-loading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 36px;
+      /* background: #000; */
+      /* animation: strip 5s ease-in-out infinite; */
+    }
+
+    .items {
+      width: 5px;
+      height: 30px;
+      background: #f00;
+      border-radius: 5px;
+    }
+
+    .strip-loading span:nth-of-type(1) {
+      animation: stripMove 1s 0s ease-in-out infinite;
+    }
+
+    .strip-loading span:nth-of-type(2) {
+      animation: stripMove 1s .15s ease-in-out infinite;
+    }
+
+    .strip-loading span:nth-of-type(3) {
+      animation: stripMove 1s .3s ease-in-out infinite;
+    }
+
+    .strip-loading span:nth-of-type(4) {
+      animation: stripMove 1s .45s ease-in-out infinite;
+    }
+
+    .strip-loading span:nth-of-type(5) {
+      animation: stripMove 1s .6s ease-in-out infinite;
+    }
+
+    @keyframes stripMove {
+
+      0%,
+      100% {
+        transform: scale3d(1, 1, 1);
+      }
+
+      50% {
+        transform: scale3d(1, 2, 1);
+      }
+    }
+
+    /* @keyframes strip {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(200px);
+      }
+      100% {
+        transform: translateX(500px);
+      }
+    } */
+  </style>
+</head>
+
+<body>
+  <div class='strip-loading'>
+    <span class='items'></span>
+    <span class='items'></span>
+    <span class='items'></span>
+    <span class='items'></span>
+    <span class='items'></span>
+  </div>
+</body>
+
+</html>

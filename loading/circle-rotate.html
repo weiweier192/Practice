@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .cir-big {
+      /* position: relative;
+      top: 100px;
+      left: 100px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #333;*/
+      width: 20px;
+      height: 20px;
+      border: 2px transparent solid;
+      border-top-color: #531dab;
+      border-bottom-color: #f0f;
+      border-left-color: #0ff;
+      border-right-color: #ff0;
+      border-radius: 50%;
+      animation: cir 2s ease-in-out infinite;
+    }
+    /* .bar {
+      position: absolute;
+      width: 30px;
+      height: 16px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: #fff;
+    }
+    .cir-small {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #fff;
+    } */
+    @keyframes cir {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(360deg) scale(1.5);
+      }
+      /* 66% {
+        transform: rotate(360deg) scale(1.5);
+      } */
+      100% {
+        transform: rotate(720deg) scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class='cir-big'>
+    <!-- <p class='bar'></p>
+    <div class='cir-small'></div> -->
+  </div>
+</body>
+
+</html>
